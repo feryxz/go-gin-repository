@@ -1,4 +1,4 @@
-package router
+package v1
 
 import "github.com/gin-gonic/gin"
 
@@ -15,7 +15,7 @@ func NewRoutersPing1(rg *gin.RouterGroup) *RoutersPing1 {
 func (ping RoutersPing1) RegisterRoute() {
 	ping.routerGroup.GET("/ping", func(context *gin.Context) {
 		context.JSON(200, gin.H{
-			"message": "Ping first ...",
+			"message": "Ping first (v1) ...",
 		})
 	})
 }
